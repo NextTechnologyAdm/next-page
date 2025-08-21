@@ -1,5 +1,5 @@
 export default function Hero() {
     return (
-        <p>Hola home</p>
+        <p>mamame el webo</p>
     )
 }
