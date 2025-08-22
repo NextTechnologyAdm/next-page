@@ -1,0 +1,19 @@
+import React from 'react'
+
+const AboutUsSection = () => {
+  return (
+    <section className="bg-gray-100 py-12">
+      <div className="container mx-auto px-4">
+        <h2 className="text-3xl font-bold mb-6 text-center">About Us</h2>
+        <p className="text-lg text-gray-700 mb-4">
+          We are a team of passionate developers dedicated to building high-quality web applications. Our mission is to create user-friendly and efficient solutions that meet the needs of our clients.
+        </p>
+        <p className="text-lg text-gray-700">
+          With years of experience in the industry, we pride ourselves on our ability to deliver projects on time and within budget. We believe in continuous learning and staying up-to-date with the latest technologies to provide the best possible service.
+        </p>
+      </div>
+    </section>
+  )
+}
+
+export default AboutUsSection
