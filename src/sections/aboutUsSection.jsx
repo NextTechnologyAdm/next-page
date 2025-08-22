@@ -1,6 +1,34 @@
 import React from 'react'
 
+
 const AboutUsSection = () => {
+  const TEXT = {
+    title: "¿Quiénes somos?",
+    description: "Somos un equipo de desarrolladores apasionados dedicados a construir aplicaciones web de alta calidad. Nuestra misión es crear soluciones eficientes y fáciles de usar que satisfagan las necesidades de nuestros clientes siguiendo nuestros ideales.",
+    ideals: [
+      {
+        icon: 
+        title: 'Innovación',
+        description: 'Nos esforzamos por estar a la vanguardia de la tecnología, implementando las últimas tendencias y herramientas en nuestros proyectos.'
+      },
+      {
+        icon: 
+        title: 'Talento',
+        description: 'Contamos con un equipo diverso de programadores capacitados, cada uno aportando su experiencia única para lograr resultados excepcionales.'
+      },
+      {
+        icon: 
+        title: 'Compromiso',
+        description: 'Nos comprometemos a entregar proyectos de alta calidad, cumpliendo con los plazos y superando las expectativas de nuestros clientes.'
+      },
+      {
+        icon:  
+        title: 'Cultura startup',
+        description: 'Fomentamos un ambiente de trabajo dinámico y colaborativo, donde la creatividad y la innovación son valoradas.'
+      }
+    ]
+  }
+
   return (
     <section className="bg-gray-100 py-12">
       <div className="container mx-auto px-4">

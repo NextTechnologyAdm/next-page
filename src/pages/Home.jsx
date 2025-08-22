@@ -6,7 +6,6 @@ export default function Home(){
         <div>
             <Hero />
             <AboutUsSection />
-            <p>Welcome to our homepage!</p>
         </div>
     );
 }
