@@ -33,7 +33,7 @@ const AboutUsSection = () => {
   }
 
   return (
-    <section className="text-white py-24 px-4 md:px-8 lg:px-16">
+    <section id="aboutus" className="text-white py-24 px-4 md:px-8 lg:px-16">
       <div className="container mx-auto max-w-7xl">
         <header className="my-20 text-center space-y-8 px-4">
           <SplitText

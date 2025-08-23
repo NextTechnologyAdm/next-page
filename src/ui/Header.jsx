@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import logo from '../assets/images/nex-white.png'
 
 export default function Header() {
   const [activeSection, setActiveSection] = useState('hero');
@@ -10,6 +11,9 @@ export default function Header() {
   const sections = [
     { id: 'hero', name: 'Inicio' },
     { id: 'aboutus', name: 'Sobre Nosotros' },
+    { id: 'services', name: 'Servicios' },
+    { id: 'projects', name: 'Proyectos' },
+    { id: 'contact', name: 'Contacto' }
   ];
 
   useEffect(() => {
@@ -48,15 +52,15 @@ export default function Header() {
     //     isVisible ? 'bg-black/30 translate-y-0' : 'bg-gray-900/0 -translate-y-full'
     //   }
       className='fixed z-50 backdrop-blur-sm border-b border-white/10 transition-all duration-500 w-full'
-      initial={{ opacity: 0, y: -30 }}
+      initial={{ opacity: 0, y: -100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, ease: 'easeOut' }}
     >
       <nav className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <div className='flex justify-center items-center text-white font-bold'>
-            <img src="/assets/images/nex-white.png" alt="logo de nex" className='w-30' />
-            <span>Nex Technology</span>
+            <img src={logo} alt="logo de nex" className='w-30' />
+            <span className='opacity-0 md:opacity-100'>Nex Technology</span>
           </div>
           <div className="hidden md:flex items-center space-x-8">
             {sections.map((section) => (
@@ -73,7 +77,7 @@ export default function Header() {
                   {section.name}
                 </span>
                 <div
-                  className={`transition-all duration-300 h-[2px] w-full rounded ${
+                  className={`transition-all duration-500 h-[2px] w-full rounded ${
                     activeSection === section.id
                       ? 'bg-gradient-to-r from-[#00deff] to-[#9965f0] opacity-100'
                       : 'bg-transparent opacity-0'
@@ -81,7 +85,7 @@ export default function Header() {
                 ></div>
               </button>
             ))}
-            <button className="bg-white py-1 px-3 font-semibold rounded-full text-[#354345] cursor-pointer shadow-md hover:shadow-xl transition-all duration-300">Contacto</button>
+            {/* <button className="bg-white p-3 font-semibold rounded-full text-black cursor-pointer shadow-md hover:shadow-xl transition-all duration-300 hover:shadow-sm hover:shadow-white/10"><MdContacts /></button> */}
           </div>
           
           {/* Mobile menu button */}
@@ -110,10 +114,10 @@ export default function Header() {
                   scrollToSection(section.id);
                   setIsMobileMenuOpen(false);
                 }}
-                className={`block w-full text-left px-4 py-3 rounded-xl font-medium transition-all duration-300 cursor-pointer transform hover:scale-105 ${
+                className={`block w-full text-center px-4 py-3 rounded-xl font-medium transition-all duration-300 cursor-pointer transform hover:scale-105 ${
                   activeSection === section.id 
-                    ? 'text-black bg-white shadow-lg shadow-white/10' 
-                    : 'text-gray-300 hover:text-white hover:bg-white/10 hover:shadow-lg'
+                    ? 'text-white bg-white/10 shadow-lg shadow-white/5' 
+                    : 'text-gray-300 hover:text-white hover:bg-white/5 hover:shadow-lg'
                 }`}
                 style={{
                   animationDelay: `${index * 50}ms`,
