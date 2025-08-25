@@ -12,7 +12,7 @@ export default function Hero() {
                     forceHoverState={true}
                 />
             </div>
-            <div className='absolute left-1/2 -translate-x-1/2 top-1/2 top-1/4 text-white bg-white/5 px-10 py-1 rounded-full border border-white/10 font-semibold'>
+            <div className='absolute left-1/2 -translate-x-1/2 top-1/4 text-white bg-white/5 px-10 py-1 rounded-full border border-white/10 font-semibold'>
                 <span>Bienvenido!</span>
             </div>
             <div className='absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 text-center flex flex-col gap-5 w-full'>
