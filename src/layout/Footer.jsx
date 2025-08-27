@@ -44,35 +44,6 @@ function Footer() {
               <p className='text-white/80 mb-4 pl- leading-relaxed max-w-md text-left'>
                 {TEXT.companyDesc}
               </p>
-              {/* Redes sociales */}
-              <div className="flex gap-4 mb-6 md:mb-0 pl-10">
-                {/* Instagram */}
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center transition-colors duration-300 group hover:bg-[#E1306C]/20">
-                  { 
-                    (
-                    <svg className="w-5 h-5 text-white group-hover:text-[#E1306C] transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5zm4.25 2.25a5.25 5.25 0 1 1-5.25 5.25 5.25 5.25 0 0 1 5.25-5.25zm0 1.5a3.75 3.75 0 1 0 3.75 3.75A3.75 3.75 0 0 0 12 5.25zm5.25 1.25a1 1 0 1 1-1 1 1 1 0 0 1 1-1z" />
-                    </svg>
-                    )
-                  }
-                </a>
-                {/* X (Twitter) */}
-                <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X" className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center transition-colors duration-300 group hover:bg-[#000]/20">
-                  {
-                    (
-                    <svg className="w-5 h-5 text-white group-hover:text-[#000] transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M17.53 2H21.5l-7.39 8.42L22.5 22h-7.19l-5.7-6.5L2.47 22H.5l7.93-9.02L1.5 2h7.19l5.19 5.93L17.53 2zm-2.13 17.5h2.13l-5.7-6.5-2.13 2.5 5.7 6.5zm-7.19-15l5.19 5.93L6.5 4.5zm13.19 0l-5.7 6.5 2.13 2.5 5.7-6.5z" />
-                    </svg>
-                    )
-                  }
-                </a>
-                {/* LinkedIn */}
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center transition-colors duration-300 group hover:bg-[#0077B5]/20">
-                  <svg className={`w-5 h-5 text-white group-hover:text-[#0077B5] transition-colors duration-300`} fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.28c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.78 1.75 1.75-.78 1.75-1.75 1.75zm13.5 10.28h-3v-4.5c0-1.08-.02-2.47-1.5-2.47-1.5 0-1.73 1.17-1.73 2.39v4.58h-3v-9h2.89v1.23h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.59v4.74z" />
-                  </svg>
-                </a>
-              </div>
             </div>
             {/* Services */}
             <div>
