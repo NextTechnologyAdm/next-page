@@ -1,7 +1,8 @@
 import Hero from '../sections/heroSection';
 import AboutUsSection from '../sections/aboutUsSection';
 import SolutionSection from '../sections/solutionSection';
-import Header from '../ui/Header';
+import Header from '../layout/Header';
+import Footer from '../layout/Footer';
 
 export default function Home(){
     return (
@@ -10,6 +11,7 @@ export default function Home(){
             <Hero />
             <AboutUsSection />
             <SolutionSection />
+            <Footer/>
         </div>
     );
 }
