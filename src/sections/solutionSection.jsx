@@ -67,7 +67,7 @@ const SolutionSection = () => {
   };
 
   return (
-    <section className="relative py-24 px-4 md:px-8 lg:px-16 text-white overflow-hidden">
+    <section id="services" className="relative py-24 px-4 md:px-8 lg:px-16 text-white overflow-hidden">
       <div className="container mx-auto max-w-7xl relative z-10">
         <motion.header
           className="text-center mb-16"
