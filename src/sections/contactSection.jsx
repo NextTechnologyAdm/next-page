@@ -244,7 +244,7 @@ const ContactSection = () => {
                 <FiMail className="w-6 h-6 text-purple-400" />
               </div>
               <div className="flex flex-col">
-                <h4 className="font-semibold text-lg pr-30 text-white/90">Email</h4>
+                <h4 className="font-semibold text-lg pr-40 text-white/90">Email</h4>
                 <a href={`mailto:${TEXT.email}`} className="text-white/70 hover:text-cyan-300 transition-colors duration-300 break-all">{TEXT.email}</a>
               </div>
             </div>
@@ -266,10 +266,10 @@ const ContactSection = () => {
                 <a href={`https://wa.me/${TEXT.whatsapp}`} aria-label="WhatsApp" className="p-3 rounded-full bg-white/10 hover:bg-green-600/30 transition-colors duration-300">
                   <FaWhatsapp className="w-6 h-6 text-green-400" />
                 </a>
-                <a href="#" aria-label="Instagram" className="p-3 rounded-full bg-white/10 hover:bg-pink-600/30 transition-colors duration-300">
+                <a href="https://www.instagram.com/nextechnology_ve/" aria-label="Instagram" className="p-3 rounded-full bg-white/10 hover:bg-pink-600/30 transition-colors duration-300">
                   <FaInstagram className="w-6 h-6 text-pink-400" />
                 </a>
-                <a href="#" aria-label="LinkedIn" className="p-3 rounded-full bg-white/10 hover:bg-blue-600/30 transition-colors duration-300">
+                <a href="https://www.linkedin.com/in/nextechnology-adm-404166381/" aria-label="LinkedIn" className="p-3 rounded-full bg-white/10 hover:bg-blue-600/30 transition-colors duration-300">
                   <FaLinkedin className="w-6 h-6 text-blue-400" />
                 </a>
               </div>
