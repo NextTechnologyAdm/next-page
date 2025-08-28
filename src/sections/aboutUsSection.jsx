@@ -92,7 +92,7 @@ const AboutUsSection = () => {
                 }`}
               >
                 <MagicCard
-                  className="p-8 rounded-2xl border border-white/10 shadow-lg hover:shadow-2xl transition-all duration-500 backdrop-blur-sm bg-white/5 transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 hover:rotate-1"
+                  className="p-8 rounded-2xl border border-white/10 shadow-lg hover:shadow-2xl backdrop-blur-sm bg-white/5 transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 hover:rotate-1"
                   gradientColor="#6a5acd" // lavender-indigo
                   gradientFrom="#6a5acd80" // lavender-indigo con opacidad
                   gradientTo="#4adede80" // picton-blue transparente
