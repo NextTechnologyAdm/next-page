@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Comments from "../sections/CommentsSection";
+import Particles  from "../ui/Particles";
 
 const cases = [
   {
@@ -36,6 +37,18 @@ export default function CasosCarousel() {
 
   return (
     <section id="projects" className="py-16 bg-gradient-to-t from-[#0b0010] to trasparent">
+      <div style={{ width: '100%', height: '100%', position: 'absolute' }}>
+        <Particles
+          particleColors={['#6a5acd', '#0a0b2e', '#4adede', '#6b7280']}
+          particleCount={400}
+          particleSpread={10}
+          speed={0.1}
+          particleBaseSize={100}
+          moveParticlesOnHover={false}
+          alphaParticles={false}
+          disableRotation={false}
+        />
+      </div>
       <div className="max-w-5xl mx-auto px-6 text-center py-5">
         <h2 className="text-4xl font-bold mb-12 text-white">
           Casos de Éxito 

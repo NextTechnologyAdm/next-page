@@ -85,18 +85,18 @@ const AboutUsSection = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true, amount: 0.5 }}
-                className={`relative z-10 w-full md:w-1/2 group p-6 transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 hover:rotate-1 ${
+                className={`relative z-10 w-full md:w-1/2 group p-6 ${
                   index % 2 === 0
                     ? "md:self-start md:text-right"
                     : "md:self-end md:text-left"
                 }`}
               >
                 <MagicCard
-                  className="p-8 rounded-2xl border border-white/10 shadow-lg hover:shadow-2xl transition-all duration-500 backdrop-blur-sm bg-white/5"
+                  className="p-8 rounded-2xl border border-white/10 shadow-lg hover:shadow-2xl transition-all duration-500 backdrop-blur-sm bg-white/5 transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 hover:rotate-1"
                   gradientColor="#6a5acd" // lavender-indigo
                   gradientFrom="#6a5acd80" // lavender-indigo con opacidad
                   gradientTo="#4adede80" // picton-blue transparente
-                  gradientSize={100}
+                  gradientSize={150}
                 >
                   <div
                     className={`flex flex-col ${
