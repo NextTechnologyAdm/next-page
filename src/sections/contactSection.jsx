@@ -103,7 +103,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-24 px-4 md:px-8 lg:px-16 text-white bg-[#0A0A0F]">
+    <section id="contact" className="py-24 px-4 md:px-8 lg:px-16 text-white bg-[#0b0010]">
       <div className="container mx-auto max-w-7xl">
         {/* Encabezado */}
         <motion.div
