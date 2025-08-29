@@ -1,9 +1,13 @@
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Comments from "../sections/CommentsSection";
-import Particles  from "../ui/Particles";
+import Particles from "../ui/Particles";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const cases = [
+  // Tu array de casos de éxito...
   {
     title: "Reservas Online para Gimnasio",
     problem: "El cliente necesitaba automatizar el registro de clases y evitar la sobreocupación.",
@@ -31,80 +35,99 @@ const cases = [
 ];
 
 export default function CasosCarousel() {
-  const [index, setIndex] = useState(0);
-  const nextCase = () => setIndex((index + 1) % cases.length);
-  const prevCase = () => setIndex((index - 1 + cases.length) % cases.length);
+  const scrollSectionRef = useRef(null);
+
+  useEffect(() => {
+    // Usamos gsap.matchMedia() para controlar la lógica por tamaño de pantalla
+    const mm = gsap.matchMedia();
+
+    mm.add("(min-width: 768px)", () => {
+      const panels = gsap.utils.toArray(scrollSectionRef.current.children);
+
+      const animacion = gsap.to(panels, {
+        xPercent: -100 * (panels.length - 1),
+        ease: "none",
+        scrollTrigger: {
+          trigger: scrollSectionRef.current,
+          pin: true,
+          scrub: 1,
+          start: "top top",
+          end: () => `+=${scrollSectionRef.current.offsetWidth}`,
+        },
+      });
+
+      return () => {
+        animacion.kill();
+        ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+      };
+    });
+
+    return () => {
+      mm.revert();
+    };
+  }, []);
 
   return (
-    <section id="projects" className="py-16 bg-gradient-to-t from-[#0b0010] to trasparent">
-      <div style={{ width: '100%', height: '100%', position: 'absolute' }}>
-        <Particles
-          particleColors={['#6a5acd', '#0a0b2e', '#4adede', '#6b7280']}
-          particleCount={400}
-          particleSpread={10}
-          speed={0.1}
-          particleBaseSize={100}
-          moveParticlesOnHover={false}
-          alphaParticles={false}
-          disableRotation={false}
-        />
-      </div>
-      <div className="max-w-5xl mx-auto px-6 text-center py-5">
+    <section id="projects">
+      <div className="relative">
+        <div style={{ width: '100%', height: '100%', position: 'absolute' }}>
+          <Particles
+            particleColors={['#6a5acd', '#0a0b2e', '#4adede', '#6b7280']}
+            particleCount={400}
+            particleSpread={10}
+            speed={0.1}
+            particleBaseSize={100}
+            moveParticlesOnHover={false}
+            alphaParticles={false}
+            disableRotation={false}
+          />
+        </div>
         <h2 className="text-4xl font-bold mb-12 text-white">
-          Casos de Éxito 
+          Casos de Éxito
         </h2>
 
-        <div className="relative overflow-hidden">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, x: 100 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -100 }}
-              transition={{ duration: 0.6 }}
-              className="flex flex-col items-center"
+        {/* El contenedor ahora es vertical por defecto y horizontal en md+ */}
+        <div ref={scrollSectionRef} className="container h-full flex flex-col md:flex-row flex-nowrap md:h-screen items-center px-4 md:px-8">
+          {cases.map((caso, i) => (
+            <div
+              key={i}
+              className="flex-shrink-0 w-full p-4"
             >
-              <img
-                src={cases[index].image}
-                alt={cases[index].title}
-                className="rounded-xl shadow-lg w-full mb-6"
-              />
-              <h3 className="text-2xl font-semibold mb-3 text-white">
-                {cases[index].title}
-              </h3>
-              <p className="text-gray-700 dark:text-gray-300 mb-2"><strong>Problema:</strong> {cases[index].problem}</p>
-              <p className="text-gray-700 dark:text-gray-300 mb-2"><strong>Solución:</strong> {cases[index].solution}</p>
-              <p className="text-indigo-600 dark:text-indigo-400 font-medium mb-4">
-                <strong>Resultado:</strong> {cases[index].result}
-              </p>
-              <a
-                href={cases[index].demo}
-                target="_blank"
-                className="bg-gradient-to-r from-[#6a5acd] to-[#4adede] px-8 py-2 rounded-lg font-semibold hover:bg-gray-100 transition"
-              >
-                Ver Proyecto
-              </a>
-            </motion.div>
-          </AnimatePresence>
-
-          {/* Controles */}
-          <div className="flex justify-between mt-8 font-semibold">
-            <button
-              onClick={prevCase}
-              className="bg-white/10 border border-white/20 px-6 md:px-8 py-2 md:py-0.5 text-white rounded-full flex items-center justify-center gap-3 cursor-pointer text-sm md:text-lg"
-            >
-              ← Anterior
-            </button>
-            <button
-              onClick={nextCase}
-              className="bg-white text-black px-6 md:px-8 py-2 md:py-1 rounded-full flex items-center justify-center gap-3 cursor-pointer text-sm md:text-lg"
-            >
-              Siguiente →
-            </button>
-          </div>
+              <div className="max-w-4xl mx-auto text-center">
+                <div className="flex flex-col md:flex-row items-center gap-8">
+                  {/* Sección de la imagen (izquierda en escritorio) */}
+                  <div className="w-full md:w-1/2">
+                    <img
+                      src={caso.image}
+                      alt={caso.title}
+                      className="rounded-xl shadow-lg w-full"
+                    />
+                  </div>
+                  {/* Sección de la descripción (derecha en escritorio) */}
+                  <div className="w-full md:w-1/2 text-left">
+                    <h3 className="text-2xl font-semibold mb-3 text-white">
+                      {caso.title}
+                    </h3>
+                    <p className="text-gray-700 dark:text-gray-300 mb-2"><strong>Problema:</strong> {caso.problem}</p>
+                    <p className="text-gray-700 dark:text-gray-300 mb-2"><strong>Solución:</strong> {caso.solution}</p>
+                    <p className="text-indigo-600 dark:text-indigo-400 font-medium mb-4">
+                      <strong>Resultado:</strong> {caso.result}
+                    </p>
+                    <a
+                      href={caso.demo}
+                      target="_blank"
+                      className="inline-block bg-gradient-to-r from-[#6a5acd] to-[#4adede] px-8 py-2 rounded-lg font-semibold text-white hover:opacity-80 transition"
+                    >
+                      Ver Proyecto
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-        <Comments />    
+      <Comments />
     </section>
   );
 }

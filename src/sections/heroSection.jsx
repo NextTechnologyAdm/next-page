@@ -3,7 +3,7 @@ import { FaLongArrowAltRight, FaStar } from "react-icons/fa";
 
 export default function Hero() {
     return  (
-        <section id="hero" className='bg-[#070010] h-[100vh]'>
+        <section id="hero" className='bg-[#070010] h-[100vh] relative'>
             <div style={{ width: '100%', height: '100%', position: 'relative' }}>
                 <Orb
                     hoverIntensity={0.2}
