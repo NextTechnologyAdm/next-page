@@ -1,6 +1,10 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import logo from '../assets/images/nex-white.png'
+import { gsap } from "gsap";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+gsap.registerPlugin(ScrollToPlugin);
+
 
 export default function Header() {
   const [activeSection, setActiveSection] = useState('hero');
@@ -43,7 +47,14 @@ export default function Header() {
   }, []);
 
   const scrollToSection = (sectionId) => {
-    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+    const target = document.getElementById(sectionId);
+    if (target) {
+      gsap.to(window, { 
+        scrollTo: { y: target, offsetY: 100 }, // ajusta offsetY según tu header
+        duration: 1,
+        ease: "power2.out"
+      });
+    }
   };
 
   return (
