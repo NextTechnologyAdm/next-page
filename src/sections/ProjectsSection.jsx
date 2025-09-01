@@ -68,9 +68,9 @@ export default function CasosCarousel() {
   }, []);
 
   return (
-    <section id="projects">
+    <section id="projects"  className="min-h-screen py-20 bg-gradient-to-t from-[#0d0010] to-transparent">
       <div className="relative">
-        <div style={{ width: '100%', height: '100%', position: 'absolute' }}>
+        {/* <div style={{ width: '100%', height: '100%', position: 'absolute' }}>
           <Particles
             particleColors={['#6a5acd', '#0a0b2e', '#4adede', '#6b7280']}
             particleCount={400}
@@ -81,7 +81,7 @@ export default function CasosCarousel() {
             alphaParticles={false}
             disableRotation={false}
           />
-        </div>
+        </div> */}
         <h2 className="text-4xl font-bold mb-12 text-white">
           Casos de Éxito
         </h2>
