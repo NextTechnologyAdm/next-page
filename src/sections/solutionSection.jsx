@@ -10,10 +10,10 @@ const SolutionSection = () => {
   const TEXT = {
     title: "Nuestras soluciones",
     description:
-      "Ofrecemos una gama completa de servicios para llevar tu idea desde la concepción hasta la implementación exitosa!",
+      "Ofrecemos una gama completa de servicios para llevar tu idea desde la concepción hasta la implementación exitosa!  ",
     solutions: [
       {
-        title: "Asesoria estrategica",
+        title: "Asesoría Estratégica",
         description:
           "Te ayudamos a navegar el panorama tecnológico, identificando las mejores herramientas y estrategias para el éxito de tu proyecto.",
         icon: <MdOutlineSavedSearch />,
@@ -21,19 +21,19 @@ const SolutionSection = () => {
       {
         title: "Diseño UX/UI",
         description:
-          "Nos enfocamos en la creación de interfaces intuitivas y estéticas para tus usuarios y para aumentar la retención de los mismos.",
+          "Enfocados en la creación de interfaces intuitivas y atractivas que mejoran la experiencia del usuario y aumentan la vista profesional de tu marca.",
         icon: <MdOutlineDesignServices />,
       },
       {
-        title: "Web Apps",
+        title: "Aplicaciones Web",
         description:
-          "Desde plataformas de e-commerce hasta herramientas de gestión internas, creamos aplicaciones web eficientes y de alto rendimiento.",
+          "Desde plataformas de E-commerce hasta herramientas de gestión internas, creamos aplicaciones web eficientes y de alto rendimiento.",
         icon: <FaGlobe />,
       },
       {
-        title: "Chatbot-IA",
+        title: "ChatBots (IA)",
         description:
-          "Automatiza la atencion al cliente en tu negocio digital para maximizar las ventas.",
+          "Automatiza la atencion al cliente en tu negocio digital para maximizar las ventas. Disponibilidad 24/7, y evita perdidas de ventas potenciales.",
         icon: <FaRobot />,
       },
     ],
@@ -82,7 +82,16 @@ const SolutionSection = () => {
             {TEXT.description}
           </p>
         </motion.header>
-
+        {/* <motion.div>
+          <div className="max-w-3xl mx-auto text-center mb-12 bg-black/20 p-6 rounded-2xl border border-white/5 shadow-lg backdrop-blur-sm hover:scale-105 transform transition-all duration-300 cursor-default">
+            <div className="flex items-center justify-center gap-3 mb-4 text-3xl"> 
+              <MdOutlineSavedSearch />
+              <h2 className="text-3xl font-bold mb-2 text-center text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-300">Asesoría Estratégica</h2>
+              <MdOutlineSavedSearch />
+            </div>
+            <p>Te ayudamos a navegar el panorama tecnológico, identificando las mejores herramientas y estrategias para el éxito de tu proyecto. </p>
+          </div>
+        </motion.div> */}
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
           variants={containerVariants}
@@ -94,21 +103,20 @@ const SolutionSection = () => {
             <motion.div
               key={index}
               variants={itemVariants}
-              className={`flex flex-col transform hover:scale-105 transition-all duration-300 ${
-                index % 2 === 0 ? "md:mt-0" : "md:mt-12"
-              }`}
+              className="flex flex-col md:h-75 transform hover:scale-110 transition-all duration-300 cursor-default"
               style={{ y: getRandomY() }}
             >
-              <div className="p-8 rounded-2xl border border-white/10 shadow-lg backdrop-blur-sm bg-white/5 h-full">
+              <div className="p-8 rounded-2xl border border-white/5 shadow-lg backdrop-blur-sm bg-black/20 h-full">
                 <div className="flex items-center justify-center mb-4">
                   <div className="p-3 rounded-full bg-gradient-to-br from-purple-600/30 to-cyan-400/30">
                     <span className="text-3xl text-white">{solution.icon}</span>
                   </div>
                 </div>
-                <h3 className="text-xl font-semibold mb-2 text-center text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-300">
+                <h3 className="text-xl font-bold mb-2 text-center text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-300">
                   {solution.title}
                 </h3>
-                <p className="text-sm md:text-base text-white/70 text-center">
+                <div className="w-[90%] bg-white/10 h-0.5 mx-auto my-1"></div>
+                <p className="text-md text-white/70 text-center ">
                   {solution.description}
                 </p>
               </div>

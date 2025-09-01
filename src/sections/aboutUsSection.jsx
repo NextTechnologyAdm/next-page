@@ -75,9 +75,9 @@ const AboutUsSection = () => {
         </header>
 
         <div className="relative flex flex-col items-center">
-          <div className="absolute w-1 h-full bg-[#6a5acd]/30 rounded-full left-1/2 transform -translate-x-1/2"></div>
+          <div className="absolute w-1 h-full bg-gradient-to-b from-[#4adede] to-[#6a5acd] opacity-50 rounded-full left-1/2 transform -translate-x-1/2"></div>
 
-          <div className="flex flex-col gap-y-28 w-full">
+          <div className="flex flex-col gap-y-5 w-full">
             {TEXT.ideals.map((ideal, index) => (
               <motion.div
                 key={index}
@@ -87,26 +87,27 @@ const AboutUsSection = () => {
                 viewport={{ once: true, amount: 0.5 }}
                 className={`relative z-10 w-full md:w-1/2 group p-6 ${
                   index % 2 === 0
-                    ? "md:self-start md:text-right"
+                    ? "md:self-start md:text-right lef-10"
                     : "md:self-end md:text-left"
                 }`}
               >
                 <MagicCard
-                  className="p-8 rounded-2xl border border-white/10 shadow-lg hover:shadow-2xl backdrop-blur-sm bg-white/5 transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 hover:rotate-1"
+                  className="p-8 rounded-2xl border border-white/5 shadow-lg hover:shadow-2xl backdrop-blur-sm bg-black/20 transition-all duration-300 transform hover:scale-105  hover:-translate-y-1 cursor-default md:w-3/4 mx-auto"
                   gradientColor="#6a5acd" // lavender-indigo
                   gradientFrom="#6a5acd80" // lavender-indigo con opacidad
                   gradientTo="#4adede80" // picton-blue transparente
-                  gradientSize={150}
+                  gradientSize={180}
                 >
                   <div
-                    className={`flex flex-col ${
-                      index % 2 === 0
-                        ? "md:items-end md:text-right"
-                        : "md:items-start md:text-left"
-                    }`}
+                    className="flex flex-col text-center"
+                    // ${
+                    //   index % 2 === 0
+                    //     ? "md:items-end md:text-right"
+                    //     : "md:items-start md:text-left"
+                    // }`}
                   >
                     <motion.div
-                      className="mb-5 text-3xl p-4 rounded-full bg-gradient-to-tr from-purple-600/30 to-cyan-400/30"
+                      className="mb-2 text-3xl w-12 h-12 rounded-full bg-gradient-to-tr from-purple-600/30 to-cyan-400/30 items-center justify-center flex mx-auto"
                       initial={{ scale: 0 }}
                       whileInView={{ scale: 1 }}
                       transition={{
@@ -120,7 +121,7 @@ const AboutUsSection = () => {
                       {ideal.icon}
                     </motion.div>
                     <motion.h3
-                      className="text-xl md:text-2xl font-bold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-300 tracking-wide"
+                      className="text-2xl md:text-3xl font-bold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-300 tracking-wide"
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.6, delay: 0.2 }}
@@ -140,7 +141,7 @@ const AboutUsSection = () => {
                   </div>
                 </MagicCard>
                 <motion.div
-                  className={`absolute top-1/2 -mt-2 w-4 h-4 rounded-full border-2 transform -translate-y-1/2 border-purple-400 bg-cyan-300 ${
+                  className={`absolute top-1/2 -mt-2 w-4 h-4 rounded-full transform -translate-y-1/2 bg-[#6a5acd] opacity-40 border border-white/20 hidden md:block ${
                     index % 2 === 0
                       ? "md:right-0 md:translate-x-1/2"
                       : "md:left-0 md:-translate-x-1/2"
