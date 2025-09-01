@@ -111,7 +111,7 @@ export default function CasosCarousel() {
                     </h3>
                     <p className="text-gray-400 mb-2"><strong>Problema:</strong> {caso.problem}</p>
                     <p className="text-gray-400  mb-2"><strong>Solución:</strong> {caso.solution}</p>
-                    <p className="text-indigo-600 dark:text-indigo-400 font-medium mb-4">
+                    <p className="text-[#6a5acd] dark:text-indigo-400 font-medium mb-4">
                       <strong>Resultado:</strong> {caso.result}
                     </p>
                     <a
