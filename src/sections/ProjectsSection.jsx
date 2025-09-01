@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Comments from "../sections/CommentsSection";
 import powPage from "../assets/images/pow-page.webp";
+import axiology from "../assets/images/axiology.webp";
 import automation from "../assets/images/automation-n8n.webp";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -24,6 +25,14 @@ const cases = [
     result: "Lanzamiento exitoso con más de 10,000 usuarios registrados en el primer mes.",
     image: "https://placehold.co/800x450",
     demo: "https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjZyvbUgbiPAxX_qf0HHf2eJYIQFnoECAsQAQ&url=https%3A%2F%2Fwww.xvideos.com%2Fhome%2Fen&usg=AOvVaw2dXrUacPZUTuCFMR16sPCc&opi=89978449"
+  },
+  {
+    title: "Adminstrador de documentos legales",
+    problem: "El cliente necesitaba una forma eficiente de gestionar documentos legales.",
+    solution: "Desarrollamos una aplicación de escritorio para organizar, buscar y gestionar documentos legales fácilmente.",
+    result: "Evita errores humanos y mejora la eficiencia de trabajo.",
+    image: axiology,
+    demo: ""
   },
   {
     title: "Automatización Atención al cliente de Instagram",
@@ -114,13 +123,19 @@ export default function CasosCarousel() {
                     <p className="text-[#6a5acd] dark:text-indigo-400 font-medium mb-4">
                       <strong>Resultado:</strong> {caso.result}
                     </p>
-                    <a
-                      href={caso.demo}
-                      target="_blank"
-                      className="inline-block bg-gradient-to-r from-[#6a5acd] to-[#4adede] px-8 py-2 rounded-lg font-semibold text-white hover:opacity-80 transition"
-                    >
-                      Ver Proyecto
-                    </a>
+                    {caso.demo ? (
+                      <a
+                        href={caso.demo}
+                        target="_blank"
+                        className="inline-block bg-gradient-to-r from-[#6a5acd] to-[#4adede] px-8 py-2 rounded-lg font-semibold text-white hover:opacity-80 transition"
+                      >
+                        Ver Proyecto
+                      </a>
+                    ) : (
+                      <div className="inline-block bg-gradient-to-r from-gray-600 to-gray-500 px-8 py-2 rounded-lg font-semibold text-white/70 cursor-not-allowed">
+                        Demo no disponible
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>

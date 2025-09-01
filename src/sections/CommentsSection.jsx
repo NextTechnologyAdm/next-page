@@ -2,14 +2,14 @@ import { FaQuoteRight } from "react-icons/fa";
 
 const testimonials = [
   {
-    name: "María López",
-    company: "GymFit",
-    comment: "Muy profesionales, la app quedó mejor de lo esperado y mis clientes la aman.",
+    name: "Jorman Sánchez",
+    company: "PowFitness",
+    comment: "La página web que me hicieron es increíble, mis clientes ahora pueden reservar clases en línea fácilmente.",
   },
   {
-    name: "Carlos Pérez",
-    company: "NutriShop",
-    comment: "Gracias a su sistema de reservas ahora manejo +300 citas al mes sin complicaciones.",
+    name: "Pedro Luis Álvarez",
+    company: "Axiología jurídica PLAF",
+    comment: "El equipo entendió perfectamente mis necesidades y creó una aplicación que me permite precisar los datos de los documentos legales de forma rápida y eficiente.",
   },
   {
     name: "Ana Torres",
