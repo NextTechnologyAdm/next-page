@@ -127,7 +127,7 @@ export default function CasosCarousel() {
                       <a
                         href={caso.demo}
                         target="_blank"
-                        className="inline-block bg-gradient-to-r from-[#6a5acd] to-[#4adede] px-8 py-2 rounded-lg font-semibold text-white hover:opacity-80 transition"
+                        className="inline-block bg-gradient-to-r from-[#6a5acd] to-[#4adede] px-8 py-2 rounded-lg font-semibold text-white hover:opacity-80 transition shadow-lg hover:shadow-indigo-700/20 hover:scale-105 transform duration-300"
                       >
                         Ver Proyecto
                       </a>
