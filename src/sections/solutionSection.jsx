@@ -68,6 +68,8 @@ const SolutionSection = () => {
 
   return (
     <section id="services" className="relative py-24 px-4 md:px-8 lg:px-16 text-white overflow-hidden">
+      {/* Gradient Background */}
+      {/* <div className="absolute inset-0 bg-gradient-to-tr from-purple-900 via-transparent to-cyan-900 opacity-30 -z-10"></div> */}
       <div className="container mx-auto max-w-7xl relative z-10">
         <motion.header
           className="text-center mb-16"
@@ -82,6 +84,7 @@ const SolutionSection = () => {
             {TEXT.description}
           </p>
         </motion.header>
+        
         {/* <motion.div>
           <div className="max-w-3xl mx-auto text-center mb-12 bg-black/20 p-6 rounded-2xl border border-white/5 shadow-lg backdrop-blur-sm hover:scale-105 transform transition-all duration-300 cursor-default">
             <div className="flex items-center justify-center gap-3 mb-4 text-3xl"> 
