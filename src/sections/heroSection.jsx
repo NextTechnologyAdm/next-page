@@ -1,7 +1,22 @@
 import Orb from '../ui/Orb'
 import { FaLongArrowAltRight, FaStar } from "react-icons/fa";
+import { gsap } from "gsap";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+
+gsap.registerPlugin(ScrollToPlugin);
 
 export default function Hero() {
+    const scrollToSection = (sectionId) => {
+        const target = document.getElementById(sectionId);
+        if (target) {
+            gsap.to(window, { 
+                scrollTo: { y: target, offsetY: 100 },
+                duration: 1,
+                ease: "power2.out"
+            });
+        }
+    };
+
     return  (
         <section id="hero" className='bg-[#020111] h-[100vh] relative'>
             <div style={{ width: '100%', height: '100%', position: 'relative' }}>
@@ -21,13 +36,13 @@ export default function Hero() {
             </div>
             <div className="absolute bottom-1/8 left-1/2 -translate-x-1/2 flex flex-col sm:flex-row gap-4 md:gap-20 font-semibold z-10">
                 {/* Botón principal */}
-                <button className="bg-white text-black px-6 md:px-10 py-2 md:py-1 rounded-full flex items-center justify-center gap-3 cursor-pointer hover:bg-gray-100 hover:scale-105 transition-all duration-300 text-sm md:text-lg">
+                <button className="bg-white text-black px-6 md:px-10 py-2 md:py-1 rounded-full flex items-center justify-center gap-3 cursor-pointer hover:bg-gray-100 hover:scale-105 transition-all duration-300 text-sm md:text-lg" onClick={() => scrollToSection('services')}>
                     <FaStar />
                     <span>Ver Servicios</span>
                 </button>
 
                 {/* Botón secundario */}
-                <button className="bg-white/10 border border-white/20 px-6 md:px-10 py-2 md:py-0.5 text-white rounded-full flex items-center justify-center gap-3 cursor-pointer hover:bg-white/20 hover:scale-105 transition-all duration-300 text-sm md:text-lg">
+                <button className="bg-white/10 border border-white/20 px-6 md:px-10 py-2 md:py-0.5 text-white rounded-full flex items-center justify-center gap-3 cursor-pointer hover:bg-white/20 hover:scale-105 transition-all duration-300 text-sm md:text-lg" onClick={() => scrollToSection('contact')}>
                     <span>Contacto</span>
                     <FaLongArrowAltRight />
                 </button>
