@@ -83,15 +83,31 @@ export default function CasosCarousel() {
               key={i}
               className="flex-shrink-0 w-full p-4"
             >
-              <div className="max-w-4xl mx-auto text-center">
-                <div className="flex flex-col md:flex-row items-center gap-8">
+              <div className="max-w-4xl mx-auto text-center relative">
+                {/* Gradiente radial de fondo */}
+                <div 
+                  className="absolute inset-0 rounded-3xl opacity-30 -z-10"
+                  style={{ 
+                    background: `radial-gradient(ellipse at ${i % 2 === 0 ? 'left' : 'right'}, rgba(0, 227, 254, 0.2) 0%, rgba(8, 7, 36, 0.1) 50%, transparent 100%)` 
+                  }}
+                ></div>
+                <div className="flex flex-col md:flex-row items-center gap-8 p-6 rounded-2xl backdrop-blur-sm bg-black/10 border border-white/5">
                   {/* Sección de la imagen (izquierda en escritorio) */}
                   <div className="w-full md:w-1/2">
-                    <img
-                      src={caso.image}
-                      alt={caso.title}
-                      className="rounded-xl shadow-lg w-full"
-                    />
+                    <div className="relative">
+                      {/* Gradiente radial para la imagen */}
+                      <div 
+                        className="absolute inset-0 rounded-xl opacity-20 -z-10"
+                        style={{ 
+                          background: 'radial-gradient(circle at center, rgba(0, 227, 254, 0.3) 0%, transparent 70%)' 
+                        }}
+                      ></div>
+                      <img
+                        src={caso.image}
+                        alt={caso.title}
+                        className="rounded-xl shadow-lg w-full relative z-10"
+                      />
+                    </div>
                   </div>
                   {/* Sección de la descripción (derecha en escritorio) */}
                   <div className="w-full md:w-1/2 text-left mb-10">
