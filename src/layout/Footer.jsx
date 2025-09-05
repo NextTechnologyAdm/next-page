@@ -1,12 +1,12 @@
 import logo from '../assets/images/nex-white.png'
 import LegalLinks from '../components/legal/LegalLinks';
-import React, { useMemo } from 'react';
+import React from 'react';
 
 // Constante movida fuera para evitar recreación
 const FOOTER_TEXTS = {
     companyDesc: 'Somos una startup digital emergente apasionada por la innovación tecnológica. Transformamos ideas en realidad digital con soluciones ágiles y costos-efectivas.',
     services: 'Servicios',
-    servicesList: ['Desarrollo Web', 'Apps Móviles', 'APIs & Backend', 'Diseño UX/UI'],
+    servicesList: ['Desarrollo Web', 'Apps Móviles', 'Chatbots (IA)', 'Diseño UX/UI', 'Y más...'],
     contact: 'Contacto',
     email: 'nextechnologyadm@gmail.com',
     phone: '+58 412 735 9010',
@@ -33,7 +33,10 @@ function Footer() {
             {/* Company Info */}
             <div className="lg:col-span-2 flex flex-col h-full justify-between">
               <div className="flex items-center space-x-5 mb-6">
-                <img src={logo} alt='NexTechnology' className='w-12 h-12' />
+                <div className='w-20 h-20'>
+                  <img src={logo} alt='NexTechnology' className='w-30 h-30 absolute top-5 left-15' />
+
+                </div>
                 <div>
                   <h3 className={`text-2xl font-bold text-white`}>
                     <span className="gradient-text">NexTechnology</span>

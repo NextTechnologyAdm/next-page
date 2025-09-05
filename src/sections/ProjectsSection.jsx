@@ -19,14 +19,6 @@ const cases = [
     demo: "https://luis-alvarezf10.github.io/pow-page"
   },
   {
-    title: "Pagina porno y juego multijugador porno",
-    problem: "El cliente quería una plataforma interactiva para adultos.",
-    solution: "Creamos una web con contenido para adultos y un juego multijugador integrado.",
-    result: "Lanzamiento exitoso con más de 10,000 usuarios registrados en el primer mes.",
-    image: "https://placehold.co/800x450",
-    demo: "https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjZyvbUgbiPAxX_qf0HHf2eJYIQFnoECAsQAQ&url=https%3A%2F%2Fwww.xvideos.com%2Fhome%2Fen&usg=AOvVaw2dXrUacPZUTuCFMR16sPCc&opi=89978449"
-  },
-  {
     title: "Adminstrador de documentos legales",
     problem: "El cliente necesitaba una forma eficiente de gestionar documentos legales.",
     solution: "Desarrollamos una aplicación de escritorio para organizar, buscar y gestionar documentos legales fácilmente.",
@@ -78,7 +70,7 @@ export default function CasosCarousel() {
   }, []);
 
   return (
-    <section id="projects"  className="min-h-screen py-20 bg-gradient-to-t from-[#0d0010] to-transparent">
+    <section id="projects"  className="min-h-screen py-20 bg-gradient-to-t from-[#020115] to-transparent">
       <div className="relative">
         {/* <div style={{ width: '100%', height: '100%', position: 'absolute' }}>
           <Particles
@@ -92,7 +84,7 @@ export default function CasosCarousel() {
             disableRotation={false}
           />
         </div> */}
-        <h2 className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-cyan-300">
+        <h2 className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#a861ed] to-[#00e3fc] mb-5 md:mb-0">
           Casos de Éxito
         </h2>
 
@@ -114,20 +106,21 @@ export default function CasosCarousel() {
                     />
                   </div>
                   {/* Sección de la descripción (derecha en escritorio) */}
-                  <div className="w-full md:w-1/2 text-left">
-                    <h3 className="p-2 bg-black/20 border border-white/5 rounded-xl text-2xl font-semibold mb-3 text-white">
+                  <div className="w-full md:w-1/2 text-left mb-10">
+                    <h3 className="text-2xl font-semibold mb-3 text-white">
                       {caso.title}
                     </h3>
+                    <div className="w-full h-0.5 md:hidden bg-gray-500/50 my-2"></div>
                     <p className="text-gray-400 mb-2"><strong>Problema:</strong> {caso.problem}</p>
                     <p className="text-gray-400  mb-2"><strong>Solución:</strong> {caso.solution}</p>
-                    <p className="text-[#6a5acd] dark:text-indigo-400 font-medium mb-4">
+                    <p className="text-[#755ff4] font-medium mb-4">
                       <strong>Resultado:</strong> {caso.result}
                     </p>
                     {caso.demo ? (
                       <a
                         href={caso.demo}
                         target="_blank"
-                        className="inline-block bg-gradient-to-r from-[#6a5acd] to-[#4adede] px-8 py-2 rounded-lg font-semibold text-white hover:opacity-80 transition shadow-lg hover:shadow-indigo-700/20 hover:scale-105 transform duration-300"
+                        className="inline-block bg-gradient-to-r from-[#755ff4] to-[#00e3fc] px-8 py-2 rounded-lg font-semibold text-white hover:opacity-80 transition shadow-lg hover:shadow-indigo-700/20 hover:scale-105 transform duration-300"
                       >
                         Ver Proyecto
                       </a>

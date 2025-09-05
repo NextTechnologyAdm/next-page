@@ -77,7 +77,7 @@ const SolutionSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-cyan-300">
+          <h2 className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#a861ed] to-[#00e3fc]">
             {TEXT.title}
           </h2>
           <p className="text-lg mt-4 max-w-2xl mx-auto text-white/80">
@@ -115,7 +115,7 @@ const SolutionSection = () => {
                     <span className="text-3xl text-white">{solution.icon}</span>
                   </div>
                 </div>
-                <h3 className="text-xl font-bold mb-2 text-center text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-300">
+                <h3 className="text-xl font-bold mb-2 text-center text-transparent bg-clip-text bg-gradient-to-r from-[#a861ed] to-[#00e3fc] ">
                   {solution.title}
                 </h3>
                 <div className="w-[90%] bg-white/10 h-0.5 mx-auto my-1"></div>
@@ -128,22 +128,22 @@ const SolutionSection = () => {
         </motion.div>
 
         {/* CTA */}
-        <div className="flex justify-center mt-20">
+        <div className="justify-center mt-20 flex flex-col gap-20">
           <motion.div
-            className="text-center"
+            className="text-center flex flex-col gap-6"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true, amount: 0.5 }}
           >
-            <h3 className="text-3xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-cyan-300">
+            <h3 className="text-3xl md:text-4xl font-bold  bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-cyan-300 p-2">
               ¿Listo para dar el siguiente paso?
             </h3>
-            <p className="text-lg mb-6 max-w-2xl mx-auto text-white/80">
+            <p className="text-lg max-w-2xl mx-auto text-white/80">
               Descarga nuestro catálogo de servicios para conocer en detalle
               cómo podemos ayudarte a construir el futuro de tu negocio.
             </p>
-            <BorderMagicButton className="md:px-12">
+            <BorderMagicButton className="md:px-12 w-1/2 md:w-auto mx-auto">
               {TEXT.downloadtxt}
             </BorderMagicButton>
           </motion.div>

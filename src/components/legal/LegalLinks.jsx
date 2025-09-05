@@ -1,5 +1,10 @@
 import React, { useState } from 'react';
 import LegalModal from './LegalModal';
+import { LiaCookieSolid } from "react-icons/lia";
+import { MdPrivacyTip } from "react-icons/md";
+import { FaClipboardList } from "react-icons/fa";
+
+
 
 const LegalLinks = ({ className = '' }) => {
   const [modalOpen, setModalOpen] = useState({ type: null, isOpen: false });
@@ -16,17 +21,17 @@ const LegalLinks = ({ className = '' }) => {
     { 
       key: 'privacy', 
       label:'Privacidad',
-      icon: '🔒'
+      icon: <MdPrivacyTip />
     },
     { 
       key: 'cookies', 
       label:'Cookies',
-      icon: '🍪'
+      icon:  <LiaCookieSolid />
     },
     { 
       key: 'terms', 
       label:'Términos',
-      icon: '📋'
+      icon: <FaClipboardList />
     }
   ];
 

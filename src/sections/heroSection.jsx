@@ -3,7 +3,7 @@ import { FaLongArrowAltRight, FaStar } from "react-icons/fa";
 
 export default function Hero() {
     return  (
-        <section id="hero" className='bg-[#070010] h-[100vh] relative'>
+        <section id="hero" className='bg-[#020111] h-[100vh] relative'>
             <div style={{ width: '100%', height: '100%', position: 'relative' }}>
                 <Orb
                     hoverIntensity={0.2}
@@ -16,7 +16,7 @@ export default function Hero() {
                 <span>Bienvenido!</span>
             </div>
             <div className='absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 text-center flex flex-col gap-5 w-full'>
-                <h1 className='text-white text-5xl md:text-6xl font-bold rop-shadow-lg drop-shadow-[0_0_10px_rgba(255,255,255,0.2)]'>Nex Technology</h1>
+                <h1 className='text-white text-5xl md:text-6xl font-bold drop-shadow-lg drop-shadow-[0_0_10px_rgba(255,255,255,0.2)]'>Nex Technology</h1>
                 <p className='text-gray-400 text-xl font-semibold'>Startup dígital para tu empresa</p>
             </div>
             <div className="absolute bottom-1/8 left-1/2 -translate-x-1/2 flex flex-col sm:flex-row gap-4 md:gap-20 font-semibold z-10">

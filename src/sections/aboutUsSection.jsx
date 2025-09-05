@@ -15,7 +15,7 @@ const AboutUsSection = () => {
         icon: <FaLightbulb className="text-2xl text-blue-500" />,
         title: "Innovación",
         description:
-          "Nos esforzamos por estar a la vanguardia de la tecnología, implementando las últimas tendencias y herramientas en nuestros proyectos.",
+          "Estamos comprometidos con la innovación constante, buscando siempre nuevas tecnologías y enfoques para mejorar nuestras soluciones.",
       },
       {
         icon: <FaUsers className="text-2xl text-green-500" />,
@@ -27,19 +27,19 @@ const AboutUsSection = () => {
         icon: <FaHandshake className="text-2xl text-yellow-500" />,
         title: "Compromiso",
         description:
-          "Nos comprometemos a entregar proyectos de alta calidad, cumpliendo con los plazos y superando las expectativas de nuestros clientes.",
+          "Nos comprometemos a entender las necesidades de nuestros clientes y a entregar soluciones que superen sus expectativas.",
       },
       {
         icon: <FaRocket className="text-2xl text-red-500" />,
-        title: "Cultura startup",
+        title: "Excelencia",
         description:
-          "Fomentamos un ambiente de trabajo dinámico y colaborativo, donde la creatividad y la innovación son valoradas.",
+          "Nuestro enfoque se basa en alcanzar la excelencia en cada proyecto, asegurando optimización, interfaz atractiva e intuitiva para el cliente.",
       },
     ],
   };
 
   return (
-    <section id= "aboutus" className="text-white  bg-gradient-to-t from-[#080b2e] to-[#090010] py-24 px-4 md:px-8 lg:px-16 overflow-hidden">
+    <section id= "aboutus" className="text-white  bg-gradient-to-b from-[#020111] to-trasparent py-24 px-4 md:px-8 lg:px-16 overflow-hidden">
       <div className="container mx-auto max-w-7xl">
         <header className="my-20 text-center space-y-8 px-4">
           <motion.div
@@ -50,7 +50,7 @@ const AboutUsSection = () => {
           >
             <SplitText
               text={TEXT.title}
-              className="text-4xl md:text-6xl font-extrabold tracking-tight text-purple-400 md:text-purple-300 drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]"
+              className="text-4xl md:text-6xl font-extrabold tracking-tight px-2 py-2  drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]"
               delay={0.1}
               duration={0.6}
               splitType="chars"
@@ -61,7 +61,7 @@ const AboutUsSection = () => {
             />
           </motion.div>
           <div className="flex justify-center">
-            <span className="inline-block w-20 h-1 bg-gradient-to-r from-purple-400 to-cyan-300 rounded-full"></span>
+            <span className="inline-block w-20 h-1 bg-gradient-to-r from-[#7660f5] to-[#00e3fe] rounded-full"></span>
           </div>
           <motion.p
             initial={{ opacity: 0, y: 50 }}
@@ -121,7 +121,7 @@ const AboutUsSection = () => {
                       {ideal.icon}
                     </motion.div>
                     <motion.h3
-                      className="text-2xl md:text-3xl font-bold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-300 tracking-wide"
+                      className="text-2xl md:text-3xl font-bold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-[#a861ed] to-[#00a3fc] tracking-wide"
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.6, delay: 0.2 }}
