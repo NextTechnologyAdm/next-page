@@ -67,7 +67,7 @@ const SolutionSection = () => {
   };
 
   return (
-    <section id="services" className="relative py-24 px-4 md:px-8 lg:px-16 text-white overflow-hidden">
+    <section id="services" className="relative py-24 px-4 md:px-8 lg:px-16 text-white overflow-hidden" style={{ background: 'radial-gradient(ellipse at center, rgba(0, 227, 254, 0.15) 0%, transparent 50%, transparent 100%)' }}>
       {/* Gradient Background */}
       {/* <div className="absolute inset-0 bg-gradient-to-tr from-purple-900 via-transparent to-cyan-900 opacity-30 -z-10"></div> */}
       <div className="container mx-auto max-w-7xl relative z-10">

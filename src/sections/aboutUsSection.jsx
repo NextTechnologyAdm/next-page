@@ -3,6 +3,7 @@ import { FaLightbulb, FaUsers, FaHandshake, FaRocket } from 'react-icons/fa';
 import { motion } from "framer-motion";
 import  SplitText  from "../ui/TextEffects/SplitText";
 import { MagicCard } from "../components/magicui/magic-card";
+import Particles from '../ui/Particles';
 
 
 const AboutUsSection = () => {
@@ -40,8 +41,20 @@ const AboutUsSection = () => {
 
   return (
     <section id= "aboutus" className="text-white  bg-gradient-to-b from-[#020111] to-trasparent py-24 px-4 md:px-8 lg:px-16 overflow-hidden">
+       <div style={{ width: '90%', height:'200dvh', position: 'absolute', overflow: 'hidden' }}>
+          <Particles
+            particleColors={['#6a5acd', '#0a0b2e', '#4adede', '#6b7280']}
+            particleCount={400}
+            particleSpread={10}
+            speed={0.05}
+            particleBaseSize={100}
+            moveParticlesOnHover={false}
+            alphaParticles={false}
+            disableRotation={false}
+          />
+        </div>
       <div className="container mx-auto max-w-7xl">
-        <header className="my-20 text-center space-y-8 px-4">
+        <div className="my-20 text-center space-y-8 px-4">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -72,7 +85,7 @@ const AboutUsSection = () => {
           >
             {TEXT.description}
           </motion.p>
-        </header>
+        </div>
 
         <div className="relative flex flex-col items-center">
           <div className="absolute w-1 h-full bg-gradient-to-b from-[#4adede] to-[#6a5acd] opacity-50 rounded-full left-1/2 transform -translate-x-1/2"></div>
